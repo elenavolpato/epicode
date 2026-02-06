@@ -1,0 +1,12 @@
+.logo {
+  max-width: 100px;
+}
+
+.movie-item {
+  transition: transform 0.2s;
+  object-fit: cover;
+}
+
+.movie-item:hover {
+  transform: scale(1.1);
+}
