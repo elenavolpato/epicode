@@ -1,20 +1,31 @@
+import { Container, Row, Col, Button } from "react-bootstrap"
+
 const Footer = () => {
   return (
     <footer>
-      <div className="row justify-content-center mt-5">
-        <div className="col col-6">
-          <div className="row">
-            <div className="col mb-2">
-              <i className="bi bi-facebook footer-icon me-2"></i>
-              <i className="bi bi-instagram footer-icon me-2"></i>
-              <i className="bi bi-twitter-x footer-icon me-2"></i>
-              <i className="bi bi-youtube footer-icon"></i>
-            </div>
-          </div>
-          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg 4">
-            <div className="col">
-              <div className="row">
-                <div className="col footer-links">
+      <Container fluid>
+        <Row className="justify-content-center mt-5">
+          <Col
+            xs={12}
+            md={8}
+          >
+            <Row>
+              <Col className="mb-2 text-white-50">
+                <i className="bi bi-facebook footer-icon me-2"></i>
+                <i className="bi bi-instagram footer-icon me-2"></i>
+                <i className="bi bi-twitter-x footer-icon me-2"></i>
+                <i className="bi bi-youtube footer-icon"></i>
+              </Col>
+            </Row>
+
+            <Row
+              xs={1}
+              sm={2}
+              md={4}
+              lg={4}
+            >
+              <Col>
+                <div className="footer-links text-white-50">
                   <p>
                     <a
                       href="#"
@@ -48,11 +59,10 @@ const Footer = () => {
                     </a>
                   </p>
                 </div>
-              </div>
-            </div>
-            <div className="col">
-              <div className="row">
-                <div className="col footer-links">
+              </Col>
+
+              <Col>
+                <div className="footer-links">
                   <p>
                     <a
                       href="#"
@@ -78,11 +88,10 @@ const Footer = () => {
                     </a>
                   </p>
                 </div>
-              </div>
-            </div>
-            <div className="col">
-              <div className="row">
-                <div className="col footer-links">
+              </Col>
+
+              <Col>
+                <div className="footer-links">
                   <p>
                     <a
                       href="#"
@@ -108,11 +117,10 @@ const Footer = () => {
                     </a>
                   </p>
                 </div>
-              </div>
-            </div>
-            <div className="col">
-              <div className="row">
-                <div className="col footer-links">
+              </Col>
+
+              <Col>
+                <div className="footer-links">
                   <p>
                     <a
                       href="#"
@@ -138,26 +146,29 @@ const Footer = () => {
                     </a>
                   </p>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col mb-2">
-              <button
-                type="button"
-                className="btn btn-sm footer-button rounded-0 mt-3"
-              >
-                Service Code
-              </button>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col mb-2 mt-2 copyright">
-              © 1997-2023 Netflix, Inc.
-            </div>
-          </div>
-        </div>
-      </div>
+              </Col>
+            </Row>
+
+            <Row>
+              <Col className="mb-2">
+                <Button
+                  variant="outline-secondary"
+                  size="sm"
+                  className="footer-button rounded-0 mt-3"
+                >
+                  Service Code
+                </Button>
+              </Col>
+            </Row>
+
+            <Row>
+              <Col className="mb-2 mt-2 copyright">
+                © 1997-2023 Netflix, Inc.
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
     </footer>
   )
 }

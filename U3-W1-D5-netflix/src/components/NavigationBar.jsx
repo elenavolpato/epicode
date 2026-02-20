@@ -1,6 +1,9 @@
 import { Navbar, Container, Nav } from "react-bootstrap"
+import { Link, useLocation } from "react-router-dom"
 
 const NavigationBar = () => {
+  const location = useLocation()
+
   return (
     <Navbar
       bg="dark"
@@ -17,38 +20,38 @@ const NavigationBar = () => {
         </Navbar.Brand>
 
         <Navbar.Collapse id="navbarSupportedContent">
-          <Nav className="me-auto">
-            <Nav.Link
-              href="#"
-              className="fw-bold"
-              active
+          <Nav className="me-auto text-white-50">
+            <Link
+              to="/"
+              className={` text-decoration-none fw-bold px-3 ${location.pathname === "/" ? "text-white" : "text-white-50"} `}
             >
               Home
-            </Nav.Link>
-            <Nav.Link
-              href="#"
-              className="fw-bold"
+            </Link>
+
+            <Link
+              to="/tv-shows"
+              className={` text-decoration-none fw-bold px-3 ${location.pathname === "/tv-shows" ? "text-white" : "text-white-50"} `}
             >
               TV Shows
-            </Nav.Link>
-            <Nav.Link
-              href="#"
-              className="fw-bold"
+            </Link>
+            <Link
+              to="/movies"
+              className={` text-decoration-none fw-bold px-3 ${location.pathname === "/movies" ? "text-white" : "text-white-50"} `}
             >
               Movies
-            </Nav.Link>
-            <Nav.Link
-              href="#"
-              className="fw-bold"
+            </Link>
+            <Link
+              to="/recently-added"
+              className={` text-decoration-none fw-bold px-3 ${location.pathname === "/recently-added" ? "text-white" : "text-white-50"} `}
             >
               Recently Added
-            </Nav.Link>
-            <Nav.Link
-              href="#"
-              className="fw-bold"
+            </Link>
+            <Link
+              to="/my-list"
+              className={` text-decoration-none fw-bold px-3 ${location.pathname === "/my-list" ? "text-white" : "text-white-50"} `}
             >
               My List
-            </Nav.Link>
+            </Link>
           </Nav>
 
           <div className="d-flex align-items-center">

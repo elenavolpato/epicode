@@ -1,0 +1,14 @@
+.card-img-fixed {
+  height: 220px;
+  object-fit: cover;
+}
+
+.cards-container {
+  min-height: 75vh !important;
+}
+.article-img {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}

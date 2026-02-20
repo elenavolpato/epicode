@@ -1,0 +1,14 @@
+.white-logo {
+  filter: brightness(0) invert(1);
+}
+.explicit-content {
+  padding-inline: 4px !important;
+  padding-bottom: 2px !important;
+  font-size: 10px !important;
+  color: #212529 !important;
+  background: #dee2e6 !important;
+}
+
+.explore-button {
+  background-color: #2e2e2e !important;
+}
